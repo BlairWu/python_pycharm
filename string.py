@@ -191,9 +191,19 @@ print('Python 字符串内建函数')
 # print (str1.find(str2, 5, 8))
 # print (str1.find(str2, 5, 11))
 # print (str1.find(str2, 10))
+# 27.rfind() 返回字符串最后一次出现的位置，如果没有匹配项则返回-1。
+# str.rfind(str, beg=0 end=len(string))
+# str - - 查找的字符串
+# beg - - 开始查找的位置，默认为0
+# end - - 结束查找位置，默认为字符串的长度。
+# str1 = "this is really a string example....wow!!!"
+# str2 = "is"
+# print("返回字符串‘is’最后一次在‘this is really a string example....wow!!!’出现的位置是",str1.rfind(str2))
+# print("返回字符串‘is’在‘this is really a string example....wow!!!’0-10之间最后一次出现的位置是",str1.rfind(str2,0,10))
+# print("返回字符串‘is’在‘this is really a string example....wow!!!’10-0之间最后一次出现的位置是",str1.rfind(str2,10,0))
 
 # 9.index() 方法检测字符串中是否包含子字符串 str ，如果指定 beg（开始） 和 end（结束） 范围，则检查是否包含在指定范围内，
-# 该方法与 python find()方法一样，只不过如果str不在 string中会报一个异常。
+# 该方法与 python find()方法一样，【！！！！！】只不过如果str不在 string中会报一个异常。
 # str.index(str, beg=0, end=len(string))
 # str - - 指定检索的字符串
 # beg - - 开始索引，默认为0。
@@ -205,6 +215,17 @@ print('Python 字符串内建函数')
 # print(str1.index(str2,5))
 # print("************")
 # print(str1.index(str2,10))
+# 28.rindex() 返回子字符串 str 在字符串中最后出现的位置，如果没有匹配的字符串会报异常，你可以指定可选参数[beg:end]设置查找的区间。
+# str.rindex(str, beg=0 end=len(string))
+# str - - 查找的字符串
+# beg - - 开始查找的位置，默认为0
+# end - - 结束查找位置，默认为字符串的长度。
+# str1 = "this is really a string example....wow!!!"
+# str2 = "is"
+# print ("返回字符串‘is’最后一次在‘this is really a string example....wow!!!’出现的位置是",str1.rindex(str2))
+# print ("返回字符串‘is’在‘this is really a string example....wow!!!’第10个字符开始最后一次出现的位置是",str1.rindex(str2,10))
+
+
 
 # 10.isalnum() isalnum() 方法检测字符串是否由 字母 和 数字 组成。
 # str.isalnum()
@@ -275,6 +296,7 @@ print('Python 字符串内建函数')
 # str = "THIS is string example....wow!!!"
 # print("字符串'THIS is string example....wow!!!'是否全部为大写字符",str.isupper())
 
+
 # 18.join(seq) Python join() 方法用于将序列中的元素以指定的字符连接生成一个新的字符串。
 # str.join(sequence)
 # s1 = "-"
@@ -283,26 +305,25 @@ print('Python 字符串内建函数')
 # print ("使用连接符字符串'-'",s1.join(seq))
 # print ("使用连接字符串''",s2.join(seq))
 
+
 # 19.len() Python len() 方法返回对象（字符、列表、元组等）长度或项目个数。
 # len(s)
 
+
 # 20.ljust() 方法返回一个原字符串左对齐,并使用空格填充至指定长度的新字符串。如果指定的长度小于原字符串的长度则返回原字符串。
 # str.ljust(width[, fillchar])
+# 29.rjust() 返回一个原字符串右对齐,并使用空格填充至长度 width 的新字符串。如果指定的长度小于字符串的长度则返回原字符串。
+# str.rjust(width[, fillchar])
 # width - - 指定字符串长度。
 # fillchar - - 填充字符，默认为空格。
 # 返回一个原字符串左对齐,并使用空格填充至指定长度的新字符串。如果指定的长度小于原字符串的长度则返回原字符串。
 # str = "Runoob example....wow!!!"
-# print ("字符串'Runoob example....wow!!!'",str.ljust(50, '*'))
-
-
-# 21.lower()    Python lower() 方法转换字符串中所有大写字符为小写。
-# str.lower()
-# # 返回将字符串中所有大写字符转换为小写后生成的字符串。
-# str = "Runoob EXAMPLE....WOW!!!"
-# print("将所有字符'Runoob EXAMPLE....WOW!!!'转换为小写",str.lower())
-# 38. upper()   转换字符串中的小写字母为大写
-# str = "Runoob EXAMPLE....WOW!!!"
-# print("字符串'Runoob EXAMPLE....WOW!!!'转换为大写",str.upper() )
+# print("以原字符串为左侧基准，填充'*'打印出50个字符",str.ljust(50,'*'))
+# print("以原字符串为右侧基准，填充'*'打印出50个字符",str.rjust(50,'*'))
+# 39.zfill() 方法返回指定长度的字符串，原字符串右对齐，前面填充0。
+# str = "this is string example from runoob....wow!!!"
+# print ("str.zfill : ",str.zfill(40))
+# print ("str.zfill : ",str.zfill(50))
 
 
 # # 22.lstrip() 方法用于截掉字符串左边的空格或指定字符。
@@ -312,7 +333,7 @@ print('Python 字符串内建函数')
 # print( str.lstrip() );
 # str = "88888888this is string example....wow!!!8888888";
 # print( str.lstrip('8') );
-# # 30.trip() 删除字符串字符串末尾的空格.
+# # 30.rstrip() 删除字符串字符串末尾的空格.
 # str = "     this is string example....wow!!!     ";
 # print( str.rstrip() );
 # str = "88888888this is string example....wow!!!8888888";
@@ -324,18 +345,15 @@ print('Python 字符串内建函数')
 # str = "88888888this is string example....wow!!!8888888";
 # print( str.strip('8') );
 
-# 23.maketrans() maketrans() 方法用于创建字符映射的转换表，对于接受两个参数的最简单的调用方式，第一个参数是字符串，表示需要转换的字符，第二个参数也是字符串表示转换的目标。
+
+# 23.maketrans()方法用于创建字符映射的转换表，对于接受两个参数的最简单的调用方式，
+# 第一个参数是字符串，表示需要转换的字符，
+# 第二个参数也是字符串表示转换的目标。
 # 两个字符串的长度必须相同，为一一对应的关系。
 # 注：Python3.4 已经没有 string.maketrans() 了，取而代之的是内建函数: bytearray.maketrans()、bytes.maketrans()、str.maketrans()
 # str.maketrans(intab, outtab)
 # intab - - 字符串中要替代的字符组成的字符串。
 # outtab - - 相应的映射字符的字符串。
-intab = "aeiou"
-outtab = "12345"
-trantab = str.maketrans(intab, outtab)
-str = "this is string example....wow!!!"
-print (str.translate(trantab))
-
 # 37. translate() 方法根据参数table给出的表(包含 256 个字符)转换字符串的字符,要过滤掉的字符放到 deletechars 参数中。
 # str.translate(table)
 # bytes.translate(table[, delete])
@@ -343,11 +361,97 @@ print (str.translate(trantab))
 # table - - 翻译表，翻译表是通过maketrans()方法转换而来。
 # deletechars - - 字符串中要过滤的字符列表。
 # 返回翻译后的字符串,若给出了 delete 参数，则将原来的bytes中的属于delete的字符删除，剩下的字符要按照table中给出的映射来进行映射 。
-intab = "aeiou"
-outtab = "12345"
-trantab = str.maketrans(intab, outtab)  # 制作翻译表
-str = "this is string example....wow!!!"
-print(str.translate(trantab))
+# intab = "aeiou"
+# outtab = "12345"
+# trantab = str.maketrans(intab, outtab)  # 制作翻译表
+# str = "this is string example....wow!!!"
+# print(str.translate(trantab))
+
+intab = "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ"
+outtab = "1234567890"
+trantab = str.maketrans(intab, outtab)
+print('Ⅰ①Ⅱ②Ⅲ③Ⅳ④Ⅴ⑤Ⅵ⑥Ⅶ⑦Ⅷ⑧Ⅸ⑨Ⅹ⑩'.translate(trantab))
+
+# 24.max() 方法返回字符串中最大的字母。
+# max(str)
+# 25.min() Python min() 方法返回字符串中最小的字母
+# min(str)
+# str = "runoob"
+# print ("最大字符: " + max(str))
+# print ("最小字符: " + min(str))
+
+
+# 26.replace() 方法把字符串中的 old（旧字符串） 替换成 new(新字符串)，如果指定第三个参数max，则替换不超过 max 次。
+# str.replace(old, new[, max])
+# old - - 将被替换的子字符串。
+# new - - 新字符串，用于替换old子字符串。
+# max - - 可选字符串, 替换不超过max次
+# 返回字符串中的 old（旧字符串） 替换成 new(新字符串)后生成的新字符串，如果指定第三个参数max，则替换不超过 max 次。
+# str = "www.w3cschool.cc"
+# print("菜鸟教程旧地址：", str)
+# print("菜鸟教程新地址：", str.replace("w3cschool.cc", "runoob.com"))
+# str = "this is string example....wow!!!"
+# print(str.replace("is", "was", 3))
+# str = "A rafrashing breeze is blowing gently"
+# print(str.replace("a","e",2))
+
+
+# 31.split() 通过指定分隔符对字符串进行切片，如果第二个参数 num 有指定值，则分割为 num+1 个子字符串。
+# str.split(str="", num=string.count(str))
+# str - - 分隔符，默认为所有的空字符，包括空格、换行(\n)、制表符(\t)等。
+# num - - 分割次数。默认为 - 1, 即分隔所有。
+# str = "this is string example....wow!!!"
+# print ("以空格为分隔符将原字符串分隔",str.split( ))
+# print ("以第一个'i'为分隔符将原字符串分隔",str.split('i',1))
+# print ("以前两个'i'为分隔符将原字符串分隔",str.split('i',2))
+# print ("以前三个'i'为分隔符将原字符串分隔",str.split('i',3))
+# print ("以'w'为分隔符将原字符串分隔",str.split('w'))
+# txt = "Google#Runoob#Taobao#Facebook"
+# 第二个参数为 1，返回两个参数列表
+# x = txt.split("#", 1)
+# print(x)
+
+
+# 32.splitlines() 按照行('\r', '\r\n', \n')分隔，返回一个包含各行作为元素的列表，如果参数 keepends 为 False，不包含换行符，如果为 True，则保留换行符。
+# str.splitlines([keepends])
+# print('ab c\n\nde fg\rkl\r\n'.splitlines())
+# print('ab c\n\nde fg\rkl\r\n'.splitlines(True))
+
+
+# 33.startswith() 方法用于检查字符串是否是以指定子字符串开头，如果是则返回 True，否则返回 False。如果参数 beg 和 end 指定值，则在指定范围内检查。
+# str - - 检测的字符串。
+# substr - - 指定的子字符串。
+# strbeg - - 可选参数用于设置字符串检测的起始位置。
+# strend - - 可选参数用于设置字符串检测的结束位置。
+# str = "this is string example....wow!!!"
+# print ("字符串是否以 this 开头：",str.startswith( 'this' ))
+# print ("从第8个字符开始的字符串是否以 string 开头：",str.startswith( 'string', 8 ))
+# print ("从第2个字符开始到第4个字符结束的字符串是否以 this 开头：",str.startswith( 'this', 2, 4 ))
+# 21.lower()    Python lower() 方法转换字符串中所有大写字符为小写。
+# str.lower()
+# # 返回将字符串中所有大写字符转换为小写后生成的字符串。
+# str = "Runoob EXAMPLE....WOW!!!"
+# print("将所有字符'Runoob EXAMPLE....WOW!!!'转换为小写",str.lower())
+# 35.swapcase() 方法用于对字符串的大、小写字母进行转换。
+# str = "this is string example....wow!!!"
+# print (str.swapcase())
+# str = "This Is String Example....WOW!!!"
+# print (str.swapcase())
+# 36.title() 方法返回"标题化"的字符串,就是说所有单词的首个字母转化为大写，其余字母均为小写(见 istitle())。
+# str = "this is string example from runoob....wow!!!"
+# print (str.title())
+# 38. upper()   转换字符串中的小写字母为大写
+# str = "Runoob EXAMPLE....WOW!!!"
+# print("字符串'Runoob EXAMPLE....WOW!!!'转换为大写",str.upper() )
+
+
+# 40.isdecimal() 方法检查字符串是否只包含十进制字符。这种方法只存在于unicode对象。
+# 注意:定义一个十进制字符串，只需要在字符串前添加 'u' 前缀即可。
+# str = "runoob2016"
+# print (str.isdecimal())
+# str = "23443434"
+# print (str.isdecimal())
+
 
 
 
