@@ -317,9 +317,9 @@ print('Python 字符串内建函数')
 # width - - 指定字符串长度。
 # fillchar - - 填充字符，默认为空格。
 # 返回一个原字符串左对齐,并使用空格填充至指定长度的新字符串。如果指定的长度小于原字符串的长度则返回原字符串。
-# str = "Runoob example....wow!!!"
-# print("以原字符串为左侧基准，填充'*'打印出50个字符",str.ljust(50,'*'))
-# print("以原字符串为右侧基准，填充'*'打印出50个字符",str.rjust(50,'*'))
+str = "Runoob example....wow!!!"
+print("以原字符串为左侧基准，填充'*'打印出50个字符",str.ljust(50,'*'))
+print("以原字符串为右侧基准，填充'*'打印出50个字符",str.rjust(50,'*'))
 # 39.zfill() 方法返回指定长度的字符串，原字符串右对齐，前面填充0。
 # str = "this is string example from runoob....wow!!!"
 # print ("str.zfill : ",str.zfill(40))
